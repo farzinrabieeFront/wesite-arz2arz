@@ -1,0 +1,46 @@
+ .table {
+     text-align: right;
+     direction: rtl;
+     border: 1px solid #F7F8FC;
+     border-radius: 25px 25px;
+
+     .thead {
+         background-color: #F7F8FC;
+         border-radius: 25px 25px 0 0;
+         border-bottom: 1px solid #F7F8FC;
+     }
+
+     .tbody {}
+
+     .tr {
+         border-bottom: 1px solid #F7F8FC;
+
+         &:last-child {
+             border-bottom: none;
+         }
+     }
+
+     .items {
+         flex: 0 0 20%;
+         max-width: 20%;
+         border-left: 1px solid #F7F8FC;
+
+
+         &:last-child {
+             border-left: none;
+
+         }
+
+         img {
+             height: 24px;
+             vertical-align: text-bottom;
+             margin-left: 5px;
+         }
+
+     }
+ }
+
+ .responsiveBox {
+     width: 100%;
+     overflow-x: auto;
+ }

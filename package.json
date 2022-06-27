@@ -1,0 +1,43 @@
+{
+  "name": "arz2arz-static",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@nivo/core": "0.79.0",
+    "@nivo/line": "^0.79.1",
+    "@nivo/stream": "^0.79.1",
+    "@reduxjs/toolkit": "^1.8.1",
+    "animate.css": "^4.1.1",
+    "apexcharts": "^3.35.2",
+    "bootstrap": "^5.1.3",
+    "chart.js": "^2.9.4",
+    "classnames": "^2.3.1",
+    "formik": "^2.2.8",
+    "mathjs": "^10.5.0",
+    "next": "^12.1.5",
+    "node-sass": "4.14.1",
+    "persianjs": "^0.4.0",
+    "rc-slider": "^10.0.0",
+    "react": "17.0.1",
+    "react-apexcharts": "^1.3.7",
+    "react-bootstrap": "^2.3.1",
+    "react-chartjs-2": "^2.11.1",
+    "react-dom": "17.0.1",
+    "react-icons": "^4.2.0",
+    "react-paginate": "^7.1.3",
+    "react-redux": "^8.0.1",
+    "react-text-transition": "^1.3.0",
+    "react-toastify": "^7.0.4",
+    "recharts": "^2.0.8",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "socket.io-client": "^4.1.3",
+    "swiper": "^8.1.5",
+    "yup": "^0.32.9"
+  }
+}

@@ -1,0 +1,8 @@
+.link {
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--main-gray-4);
+    text-decoration: none;
+  }
+}

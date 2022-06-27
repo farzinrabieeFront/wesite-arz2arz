@@ -1,0 +1,201 @@
+@import '/src/styles/base/colors';
+@import '/src/styles/abstracts/mixins/responsive';
+
+
+.card {
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    height: 330px;
+    max-width: 350px;
+    margin: 0 auto;
+
+    .front {
+        z-index: 1;
+        background-color: #fff;
+        border: 1px solid #E5EFFF;
+        box-shadow: 20px 5px 50px rgba(46, 91, 255, 0.05);
+        border-radius: 20px;
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -ms-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+        width: 100%;
+    }
+
+    .back {
+        transform: rotateY(180deg);
+        background: url(../../../public/images/Intersection.png), linear-gradient(33deg, #2f046b 6%, #11dcca 83%);
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: contain;
+        border: 1px solid #E5EFFF;
+        box-shadow: 20px 5px 50px rgba(46, 91, 255, 0.05);
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        opacity: 0;
+        -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -ms-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+    }
+
+    &.active {
+        .front {
+            transform: rotateY(180deg);
+            z-index: 0;
+
+        }
+
+        .back {
+            transform: rotateY(0deg);
+            z-index: 1;
+            opacity: 1;
+
+            .image {
+                img {
+                    height: 70px;
+                    width: 70px;
+                    border: 3px solid #45F8F4;
+                    box-shadow: 0 0 16px #45F8F4;
+                }
+            }
+        }
+    }
+
+
+
+    .image {
+        img {
+            border-radius: 100%;
+            height: 48px;
+            width: 48px;
+        }
+    }
+
+    .price {
+        .icon {}
+
+        .dollar {
+            direction: ltr;
+        }
+
+        .text {}
+
+    }
+
+
+    .footer {
+        min-height: 100px;
+        position: relative;
+
+        .recharts-layer.recharts-area {
+            width: 100%;
+        }
+
+
+    }
+
+    &.more {
+        z-index: 1;
+        background-color: #fff;
+        border: 1px solid #E5EFFF;
+        box-shadow: 20px 5px 50px rgba(46, 91, 255, 0.05);
+        border-radius: 20px;
+        min-height: 330px;
+
+        .icon {
+            background-color: $blue;
+            border-radius: 100%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            color: #fff;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 7px rgba($color: #284DD8, $alpha: 0.33);
+
+            svg {
+                font-size: 2rem;
+
+            }
+        }
+
+    }
+
+    .gradient {
+
+        width: 100%;
+        position: relative;
+        background: rgb(254, 230, 229);
+        background: linear-gradient(0deg, rgba(254, 230, 229, 0.22) 0%, rgba(254, 230, 229, 1) 100%);
+
+        &.up {
+            background: rgb(223, 248, 237);
+            background: linear-gradient(0deg, rgba(223, 248, 237, 0.22) 0%, rgba(223, 248, 237, 1) 100%);
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            z-index: 9;
+
+            span {
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+
+@include breakpoint(md) {
+    .card {
+        height: auto;
+    }
+}
+
+@include breakpoint(sm) {
+    .card {
+        // max-width: 350px;
+        .image {
+            margin-bottom: 0.5rem !important;
+            img {
+                border-radius: 100%;
+                height: 68px;
+                width: 68px;
+            }
+        }
+        .footer {
+            min-height: 70px;
+        }
+    }
+    .title{
+        font-size: 1.5rem !important;
+    }
+    .subTitle{
+        font-size: 1.1rem !important;
+    }
+    .price{
+        font-size: 1.3rem !important;
+    }
+    .rialPrice{
+        font-size: 0.9rem !important;
+    }
+    .chartPrice{
+        font-size: 1.2rem !important;
+    }
+}

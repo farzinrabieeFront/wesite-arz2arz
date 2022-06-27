@@ -1,0 +1,273 @@
+@import '/src/styles/abstracts/mixins/responsive';
+@import '/src/styles/base/colors';
+
+
+.hole {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    border-radius: 15px;
+    transition: all 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+    padding-left: 3rem;
+    padding-right: 0;
+
+    .title {
+        color: #fff;
+    }
+}
+
+.isLearning {
+    animation: opacity 0.5s forwards;
+    animation-timing-function: ease-in-out;
+
+    @keyframes opacity {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.demo {
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    transition: all 0.9s ease-in-out;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border-radius: 100%;
+        width: 555px;
+        height: 555px;
+        max-width: 100%;
+        background: rgb(47, 4, 107);
+        background: linear-gradient(353deg, rgba(47, 4, 107, 1) 30%, rgba(17, 220, 202, 1) 95%);
+    }
+
+    .startLearning {
+        position: relative;
+        z-index: 9;
+        flex: 0 0 28%;
+        max-width: 28%;
+        margin-right: -25px;
+    }
+
+    .box {
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+        z-index: 9;
+        border: none !important;
+        max-width: 390px;
+        margin: 0 auto;
+        overflow: hidden;
+        flex: 0 0 70%;
+        max-width: 70%;
+        margin: 0 auto;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+
+
+        .body {
+            .selection {
+                box-shadow: 0 0px 4px rgba($color: #000000, $alpha: 0.05);
+                border: 1px solid #e6ebfd;
+                height: 47.6px;
+
+                img.imgIcon {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            .selectionLabel {
+                color: #909AA6;
+                margin-bottom: 0.25rem;
+            }
+
+            .arrowBox {
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 1px;
+                    border-bottom: 1px solid #e6ecf4;
+                    top: 50%;
+                }
+
+                .arrow {
+                    box-shadow: 0 0 20px rgba($color: #3983f7, $alpha: 0.21);
+                    padding: 0.5rem;
+                    border-radius: 100%;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    margin: 0 auto;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    z-index: 9;
+                    position: relative;
+                    background: #fff;
+                }
+            }
+
+            .subDescs {
+                position: relative;
+
+
+            }
+        }
+    }
+
+}
+
+
+@include breakpoint(lg) {
+
+    .description {
+        padding-left: 2rem;
+    }
+
+    .demo {
+        .isLearningBox {
+            flex: 0 0 80%;
+            max-width: 80%;
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .mdNone {
+        display: none !important;
+    }
+
+    .description {
+        margin-bottom: 1rem;
+        padding-left: 0rem;
+
+    }
+
+    .demo {
+        flex-wrap: wrap;
+
+        .box {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .startLearning {
+            max-width: 100%;
+            margin: 0 auto;
+            flex: 0 0 100%;
+            padding-left: 0 !important;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .button {
+        svg {
+            display: none;
+        }
+    }
+
+    .hole {
+        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
+    }
+
+    .holeStep0 {
+        width: 1px !important;
+        height: 1px !important;
+    }
+
+    .pcDescription {
+        position: absolute;
+        width: 100%;
+        z-index: 99;
+        transition: top 0.4s ease-in;
+        padding: 0 2rem !important;
+
+    }
+
+    .step0 {
+        top: 167px;
+    }
+
+    .step1 {
+        top: 130px;
+    }
+
+    .step2 {
+        top: 220px;
+    }
+
+    .step3 {
+        top: 90px;
+    }
+
+    .step4 {
+        top: 220px;
+    }
+
+    .step5 {
+        top: 330px;
+    }
+}
+
+@include breakpoint(sm) {
+    .demo {
+
+        .box {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@include breakpoint(xs) {
+
+    .demo {
+        .box {
+            .header {
+                .items {
+                    &.active {
+                        img {
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .xsFullWidth {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

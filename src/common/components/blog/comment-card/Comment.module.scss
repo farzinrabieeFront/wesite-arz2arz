@@ -1,0 +1,44 @@
+
+@import "../../../../styles/base/mixins/responsive";
+
+.textArea {
+  border: 1px solid #D9E0E9;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  width: 90%;
+  height: 120px;
+
+
+}
+
+.replayComment {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.replayCommentActive {
+  height: 200px;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+}
+.btnSend{
+  width: 180px;
+height: 40px;
+
+}
+.textComment{
+  width: 100%;
+  text-align: justify ;
+  line-height: 24px;
+}
+
+@include breakpoint(sm){
+  .btnSend{
+    width: 100%;
+    height: 40px;
+
+  }
+}

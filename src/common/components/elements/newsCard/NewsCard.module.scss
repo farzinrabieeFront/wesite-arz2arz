@@ -1,0 +1,47 @@
+@import "../../../../styles/base/colors";
+@import "../../../../styles/abstracts/mixins/responsive";
+
+.col {
+
+
+  .box {
+    box-shadow: 0px 4px 30px rgba(0, 186, 186, 0.1);
+    border: 1px solid rgba(0, 163, 163, 0.2);
+    border-radius: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 306px;
+
+    .img {
+      a {
+        position: relative;
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    .desc {
+      padding: 0 1rem;
+      padding-bottom: 0.35rem;
+      display: flex;
+      flex-flow: row-reverse wrap;
+      justify-content: flex-start;
+      flex-direction: row;
+
+      a {
+        text-decoration: none;
+      }
+      .title {
+        min-height: 56px;
+        line-height: 28px;
+      }
+      .more:hover {
+        color: var(--main-blue);
+      }
+    }
+  }
+}

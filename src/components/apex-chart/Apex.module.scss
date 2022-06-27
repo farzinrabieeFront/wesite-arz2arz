@@ -1,0 +1,31 @@
+@import '../../styles/abstracts/mixins/responsive';
+.posApex{
+  position: absolute;
+  bottom: 13%;
+  left: -12px;
+  right: -10px;
+}
+//@include breakpoint(xs){
+//  .posApex{
+//    position: absolute;
+//    bottom: -14%;
+//    left: -12px;
+//    right: -10px;
+//  }
+//
+//
+//
+//
+//}
+@include breakpoint(md){
+  .posApex{
+    position: absolute;
+    bottom:-14%;
+    left: -12px;
+    right: -10px;
+  }
+
+
+
+
+}

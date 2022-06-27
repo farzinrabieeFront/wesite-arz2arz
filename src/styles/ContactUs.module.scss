@@ -1,0 +1,146 @@
+@import "/src/styles/base/mixins/_responsive.scss";
+
+.card {
+  width: 100%;
+  max-width: 514px;
+  min-width: 366px;
+  //max-height: 692px;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 24px;
+  height: 100%;
+
+  .input {
+    max-width: 466px;
+    height: 174px;
+  }
+
+  .buttonIcon {
+    position: absolute;
+    left: 10px;
+    transition: 0s;
+  }
+
+  .supporters {
+    li:first-child {
+      border-bottom: 1px solid rgba(0, 163, 163, 0.1);
+    }
+
+    li:last-child {
+      border-top: 1px solid rgba(0, 163, 163, 0.1);
+    }
+  }
+
+  .map {
+    border: 1px solid var(--main-gray-border);
+    width: 100%;
+    height: 254px;
+    border-radius: 20px;
+  }
+}
+
+.formContact {
+
+}
+
+.backImG {
+  position: relative;
+
+}
+
+//.backImG::before{
+//  content: "";
+//  //content: url(../../../../../public/svg/backgroundRightArrow.svg);
+//  background-image: url("../../public/svg/backgroundRightArrow.svg");
+//  //background-repeat: no-repeat;
+//  width: 100%;
+//  height: 100%;
+//  background-repeat: no-repeat;
+//  background-position: right top;
+//  top: -24%;
+//  position: absolute;
+//  z-index: -1;
+//
+//}
+//.backImG::after{
+//  content: "";
+//  //content: url(../../../../../public/svg/backgroundRightArrow.svg);
+//  background-image: url("../../public/svg/backgroundLeftArrow.svg");
+//  //background-repeat: no-repeat;
+//  width: 100%;
+//  height: 100%;
+//  background-repeat: no-repeat;
+//  background-position: left top;
+//  top: 36%;
+//  position: absolute;
+//  z-index: -1;
+//
+//}
+.cirlceBack {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("../../public/svg/circleBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 100px;
+  left: 10%;
+  z-index: -1;
+}
+
+.cirlceBack2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("../../public/svg/circleBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: 0px;
+  right: 10%;
+  z-index: -1;
+}
+
+.TriangleBack {
+  position: absolute;
+  top: -244px;
+  z-index: -1;
+  right: 0;
+}
+
+.TriangleBack2 {
+  position: absolute;
+  top: 500px;
+  left: 0;
+  z-index: -1;
+}
+
+
+@include breakpoint(sm) {
+  .card {
+    .map {
+      height: 200px;
+    }
+  }
+  .TriangleBack {
+    top: -86px;
+  }
+  .TriangleBack2 {
+    top: 1400px;
+  }
+
+
+}
+
+@include breakpoint(xs) {
+  //.backImG::before{
+  //  //content: url(../../../../../public/svg/backgroundRightArrow.svg);
+  //  background-image: url("../../public/svg/backgroundRightMobile.svg");
+  //  //background-repeat: no-repeat;
+  //  top: -7%;
+  //}
+  //.backImG::after{
+  //  background-image: url("../../public/svg/backgroundLeftMobile.svg");
+  //  top: 83%;
+  //
+  //}
+}

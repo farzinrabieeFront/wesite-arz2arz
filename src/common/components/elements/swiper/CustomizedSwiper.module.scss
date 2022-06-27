@@ -1,0 +1,18 @@
+.swiperWrapper {
+
+  :global(.swiper-pagination) {
+    position: absolute;
+
+    :global(.swiper-pagination-bullet) {
+      background: var(--main-gray-0);
+    }
+
+    :global(.swiper-pagination-bullet-active) {
+      background-color: var(--main-blue);
+    }
+  }
+
+  .btn {
+    z-index: 999;
+  }
+}

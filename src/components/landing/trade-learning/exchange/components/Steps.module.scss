@@ -1,0 +1,159 @@
+@import '/src/styles/abstracts/mixins/responsive';
+@import '/src/styles/base/colors';
+
+.title {
+    position: relative;
+
+    animation: opacity 2.2s forwards;
+    animation-timing-function: ease-in-out;
+
+    @keyframes opacity {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.description {
+    .img {
+        flex: 0 0 60px;
+        max-width: 60px;
+    }
+
+    min-height: 73px;
+    bottom: -200px;
+    position: relative;
+    animation: description 1s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes description {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+.prev {
+    left: -100px;
+    position: relative;
+    animation: prevButton 1.5s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes prevButton {
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.next {
+    right: -100px;
+    position: relative;
+    animation: nextButton 1.5s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes nextButton {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+.svg {
+    position: absolute;
+    top: -72px;
+    left: -100px;
+    z-index: 99;
+    overflow: inherit;
+    stroke-width: 3;
+    stroke: #0BC0CF;
+    fill: none;
+}
+
+.path {
+    stroke-dasharray: 1105;
+    stroke-dashoffset: 1105;
+    animation: border 1.4s forwards;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+
+}
+
+.bottomSvg {
+    bottom: 43px;
+    top: auto;
+}
+
+@keyframes border {
+    from {
+        stroke-dashoffset: 1105;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.smSvg {
+    display: none;
+}
+
+
+@include breakpoint(lg) {
+    .lgSvg {
+        display: none;
+    }
+
+    .smSvg {
+        display: block;
+        left: -63px;
+        top: -69px;
+    }
+
+    .bottomSvg {
+        bottom: 53px;
+        top: auto;
+    }
+}
+
+
+@include breakpoint(md) {
+
+    .smSvg {
+        display: none;
+    }
+
+    .box {
+        display: none !important;
+    }
+
+    .PrevNext {
+        button {
+            font-size: 0.8rem;
+        }
+    }
+
+    .description {
+        min-height: auto;
+
+        .desc {
+            color: #fff;
+        }
+
+    }
+}

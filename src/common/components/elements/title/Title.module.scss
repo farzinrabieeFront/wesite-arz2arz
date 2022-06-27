@@ -1,0 +1,181 @@
+@import "../../../../styles/base/colors";
+@import "../../../../styles/abstracts/mixins/responsive";
+
+.icon {
+  background-image: url(../../../../../public/images/index/beforeTitle.svg);
+  background-size: cover;
+  flex: 0 0 80px;
+  max-width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 50px;
+    height: auto;
+  }
+
+  &.noneBefore {
+    background-image: none;
+
+    img {
+      width: 70px;
+    }
+  }
+}
+
+.title {
+  position: relative;
+  font-weight: 700;
+  min-width: 120px;
+  margin: 0 10px 0 0;
+  width: 220px;
+}
+
+.waveLine {
+  position: relative;
+  width: 68%;
+
+
+
+  .btn {
+    position: absolute;
+    bottom: -34px;
+    left: -4.3rem;
+  }
+  .btnTittle{
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      background: linear-gradient(90deg, #00a3a3, #18edcc);
+      width: 96%;
+      height: 2px;
+      top: 11px;
+
+    }
+  }
+  .notBtnTitle{
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      background: linear-gradient(90deg, #00a3a3, #18edcc);
+      width: 100%;
+      height: 2px;
+      top: 11px;
+
+    }
+  }
+}
+.notBtn{
+  width: 76%;
+}
+.parentTittle{
+  width: 95%;
+}
+
+@include breakpoint(lg) {
+  .parentTittle{
+    width: 100%;
+  }
+  .waveLine {
+    width: 56%;
+
+    &::before {
+      width: 74%;
+    }
+    .btn {
+      left: -6rem;
+    }
+  }
+  .notBtn{
+    width: 76%;
+  }
+}
+
+//@media (max-width: 1399px) {
+//  .waveLine {
+//    &::before {
+//      width: 68%;
+//    }
+//  }
+//}
+
+@include breakpoint(md) {
+  .parentTittle{
+    width: 100%;
+  }
+  .icon {
+    max-width: 70px;
+    height: 70px;
+  }
+  .waveLine {
+    width: 65%;
+
+    &::before {
+      width: 58%;
+    }
+    .btn {
+      left: -6rem;
+    }
+  }
+  .notBtn{
+    width: 76%;
+  }
+}
+
+//@media (max-width: 910px) {
+//  .waveLine {
+//    &::before {
+//      width: 55%;
+//    }
+//  }
+//}
+
+.center {
+  justify-content: center;
+}
+
+.label {
+  display: inline-block;
+  background: rgba($color: $lightRed, $alpha: 0.2);
+  color: $lightRed;
+  border-radius: 50rem !important;
+  padding: 0.175rem 0.75rem;
+  font-size: 0.8rem;
+  // margin-right: 15px;
+
+  &.greenLabel {
+    background: rgba($color: $lightGreen, $alpha: 0.16);
+    color: $lightGreen;
+  }
+}
+
+@include breakpoint(sm) {
+  .parentTittle{
+    width: 100%;
+  }
+  .singleBlog {
+    .icon {
+      display: none !important;
+    }
+  }
+
+  .icon {
+    // display: none;
+    flex: 0 0 60px;
+    max-width: 60px;
+    height: 60px;
+
+    img {
+      width: 35px;
+    }
+  }
+
+  &.waveLine {
+    flex: 0 0 145px;
+    max-width: 145px;
+  }
+}

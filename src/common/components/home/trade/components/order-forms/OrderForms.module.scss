@@ -1,0 +1,289 @@
+@import "../../../../../../styles/base/mixins/_responsive.scss";
+
+.orderForms {
+  overflow: hidden;
+  max-width: 462px;
+  border-radius: 30px;
+  box-shadow: 0px 8px 70px -15px rgba(0, 186, 186, 0.1);
+  position: relative;
+
+
+
+  .BorderAnimation1 {
+    position: absolute;
+    width: 95%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    //padding: 10px;
+    margin: auto;
+    border-radius: 12px;
+    z-index: 1001;
+    transition: all 2s;
+
+  }
+
+  .BorderAnimation12 {
+    height: 20%;
+    backdrop-filter: blur(8px);
+    transition: all 2s;
+  }
+
+  .BorderAnimation13 {
+    height: 36%;
+    backdrop-filter: blur(8px);
+    transition: all 2s;
+  }
+
+  .BorderAnimation14 {
+    height: 51%;
+    backdrop-filter: blur(8px);
+    transition: all 2s;
+  }
+
+  .BorderAnimation15 {
+    height: 73%;
+    backdrop-filter: blur(8px);
+    transition: all 2s;
+  }
+
+  .BorderAnimation16 {
+    height: 87%;
+    backdrop-filter: blur(8px);
+    transition: all 2s;
+  }
+
+  .BorderAnimation2 {
+    position: absolute;
+    width: 95%;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 110px;
+    border: 3px solid var(--main-blue);
+    padding: 10px;
+    margin: auto;
+    border-radius: 12px;
+    transition: height 2s, top 2s;
+    //backdrop-filter: blur(8px);
+    z-index: 1002;
+  }
+
+  .BorderAnimation22 {
+    top: 134px;
+    transition: all 2s;
+  }
+
+  .BorderAnimation23 {
+    top: 232px;
+    transition: all 2s;
+  }
+
+  .BorderAnimation24 {
+    top: 330px;
+    height: 150px;
+    transition: all 2s;
+
+  }
+
+  .BorderAnimation25 {
+    top: 478px;
+    height: 110px;
+    transition: all 2s;
+
+  }
+
+  .BorderAnimation26 {
+    top: 566px;
+    height: 88px;
+    transition: all 2s;
+
+  }
+
+  //.BorderAnimation2Active{
+  //  position:absolute;
+  //  width: 95%;
+  //  top: 9px;
+  //  left:0;
+  //  right: 0;
+  //  height: 104px;
+  //  border: 3px solid black;
+  //  padding: 10px;
+  //  margin: auto;
+  //  border-radius: 12px;
+  //  //backdrop-filter: blur(8px);
+  //}
+  .BorderAnimation3 {
+    position: absolute;
+    width: 100%;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 81%;
+    //border: 2px solid black;
+    //padding: 10px;
+    margin: auto;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    z-index: 10;
+    transition: all 2s;
+  }
+
+  .BorderAnimation32 {
+    height: 63%;
+    transition: all 2s;
+  }
+
+  .BorderAnimation33 {
+    height: 48%;
+    transition: all 2s;
+  }
+
+  .BorderAnimation34 {
+    height: 28%;
+    transition: all 2s;
+  }
+
+  .BorderAnimation35 {
+    height: 11%;
+    transition: all 2s;
+  }
+
+  .BorderAnimation36 {
+    height: 0;
+    padding: 0;
+    transition: all 2s;
+  }
+
+  .orderTab {
+    width: 100%;
+    margin: auto;
+    // border-radius: 5px;
+    background-color: #fff;
+
+    // border: 1px solid #eeeeee;
+    .marketTab,
+    .limitTab {
+      & > div {
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--main-gray-3);
+        border-radius: 12px;
+        background-color: var(--main-bg-light);
+        transition: all 0.3s ease-in;
+
+        span {
+          transition: all 0s;
+
+        }
+
+        &.active {
+
+          cursor: pointer;
+          border-radius: 12px;
+          background-color: var(--main-blue);
+          box-shadow: 0px 4px 16px rgba(0, 186, 186, 0.4);
+          color: #fff;
+        }
+      }
+    }
+
+    .limitTab {
+      & > div {
+        &.active {
+
+          border-radius: 12px;
+          // color: #00b4d8;
+        }
+      }
+    }
+  }
+}
+
+
+@include breakpoint(md) {
+  .orderForms {
+    height: 595px;
+    .BorderAnimation2 {
+      height: 89px;
+      top: 2px;
+    }
+
+    .BorderAnimation3 {
+      height: 85%;
+    }
+
+    .BorderAnimation12 {
+      height: 15%;
+    }
+
+    .BorderAnimation22 {
+      top: 80px;
+      height: 110px;
+    }
+
+    .BorderAnimation32 {
+      height: 67%;
+    }
+
+    .BorderAnimation13 {
+      height: 29%;
+    }
+
+    .BorderAnimation23 {
+      height: 110px;
+      top: 171px;
+    }
+
+
+    .BorderAnimation33 {
+      height: 53%;
+    }
+
+    .BorderAnimation14 {
+      height: 44%;
+    }
+
+    .BorderAnimation24 {
+      height: 150px;
+      top: 263px;
+
+    }
+
+    .BorderAnimation26 {
+      height: 88px;
+    }
+
+    .BorderAnimation34 {
+      height: 29%;
+    }
+
+    .BorderAnimation15 {
+height: 69%;
+    }
+
+    .BorderAnimation25 {
+      height: 110px;
+      top: 402px;
+    }
+
+    .BorderAnimation35 {
+      height: 14%;
+    }
+    .BorderAnimation16{
+      height: 84%;
+    }
+    .BorderAnimation26{
+      top: 498px;
+      height: 87px;
+    }
+    .BorderAnimation36{
+      height: 0;
+      padding: 0;
+    }
+  }
+}

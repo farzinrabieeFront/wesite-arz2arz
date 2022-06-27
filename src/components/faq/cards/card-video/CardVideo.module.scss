@@ -1,0 +1,48 @@
+.card {
+    max-width: 260px;
+    margin: 0 auto;
+
+    .img {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: 20px 5px 50px rgba($color: #2E5BFF, $alpha: 0.05);
+
+        img {
+            max-width: 260px;
+            height: 260px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(37, 48, 122);
+            background: linear-gradient(90deg, rgba(37, 48, 122, 0.42) 0%, rgba(14, 18, 47, 0.42) 51%, rgba(0, 0, 0, 0.42) 100%);
+        }
+
+        .icon {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 35%;
+            text-align: center;
+            z-index: 99;
+        }
+
+        .label {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+
+            z-index: 9;
+            background-color: rgba(30, 32, 38, 0.79);
+            padding: 0.25rem 0.5rem;
+        }
+    }
+}

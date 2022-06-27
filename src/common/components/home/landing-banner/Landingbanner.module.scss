@@ -1,0 +1,75 @@
+@import "../../../../styles/abstracts/mixins/responsive";
+
+.bannerContainer {
+  position: relative;
+  padding-top: 80px;
+  background: linear-gradient(
+    2.24deg,
+    rgba(0, 163, 163, 0) 2.01%,
+    rgba(0, 163, 163, 0.2) 98.28%
+  );
+  background-position: top;
+  background-repeat: no-repeat;
+
+  .bannerTitle {
+    transition: all 0.3s ease-in-out;
+
+    line-height: 60px;
+    text-align: right;
+  }
+
+  p {
+    white-space: pre;
+  }
+
+  .bannerImg {
+    img {
+      transform: scale(1);
+      background-position: center;
+      background-size: 80%;
+      background-image: url("../../../../../public/svg/banner-img-bg.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .cirlceBack{
+   position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../public/svg/circleBackground.svg");
+background-position: center;
+    bottom: -111px;
+    right: 20%;
+    background-repeat: no-repeat;
+    }
+  .cirlceBack2{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../../../../../public/svg/circleBackground.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: -200px;
+    left: 10%;
+  }
+
+
+  @include breakpoint(lg) {
+    .bannerTitle {
+      width: 90%;
+      div {
+        font-size: 2rem !important;
+      }
+      line-height: 40px;
+      font-size: 2rem !important;
+    }
+  }
+  @include breakpoint(md) {
+    p {
+      white-space: normal;
+    }
+  }
+}

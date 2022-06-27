@@ -1,0 +1,61 @@
+@import "/src/styles/abstracts/mixins/responsive";
+
+.preText {
+  white-space: pre;
+  line-height: 32px;
+  text-align: justify;
+}
+
+
+.backImg{
+  position: relative;
+
+}
+//.backImg::before{
+//  content: "";
+//  //content: url(../../../../../public/svg/backgroundRightArrow.svg);
+//  background-image: url("../../../../../public/svg/backgroundRightArrow.svg");
+//  //background-repeat: no-repeat;
+//  width: 100%;
+//  height: 200%;
+//  background-repeat: no-repeat;
+//  background-position: right top;
+//  top: -500px;
+//  position: absolute;
+//  z-index: -1;
+//
+//}
+.cirlceBack{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("../../../../../public/svg/circleBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: -40px;
+  right: 5%;
+}
+.TriangleBack{
+  position: absolute;
+  top: -500px;
+  z-index: -1;
+  right: 0;
+}
+
+
+@include breakpoint(md) {
+  .preText {
+    white-space: normal;
+  }
+  //.backImg::before{
+  //  background-image: url("../../../../../public/svg/backgroundRightMobile.svg");
+  //  top: -18%;
+  //
+  //}
+
+}
+@include breakpoint(sm) {
+  .TriangleBack {
+    top: -300px;
+  }
+}

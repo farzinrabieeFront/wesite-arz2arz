@@ -1,0 +1,252 @@
+@import '/src/styles/abstracts/mixins/responsive';
+@import '/src/styles/base/colors';
+
+.hole {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    border-radius: 15px;
+    transition: all 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+
+}
+
+.description {
+    padding-left: 0;
+    padding-right: 2rem;
+
+    .title {
+        color: #fff;
+    }
+}
+
+.isLearning {
+    animation: opacity 0.5s forwards;
+    animation-timing-function: ease-in-out;
+
+    @keyframes opacity {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.demo {
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &:before {
+        content: "";
+        position: absolute;
+        right: -15px;
+        top: -15px;
+        width: 600px;
+        height: 600px;
+        max-width: 100%;
+        background-image: url(../../../../../public/images/demo-AutomaticTransactions-bg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+    .startLearning {
+        position: relative;
+        z-index: 9;
+        flex: 0 0 28%;
+        max-width: 28%;
+    }
+
+
+    .box {
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-color: #fff;
+        border-radius: 20px;
+        position: relative;
+        z-index: 9;
+        border: none !important;
+        overflow: hidden;
+        flex: 0 0 70%;
+        max-width: 70%;
+        margin: 0 auto;
+        transition-duration: 1s;
+        max-width: 388px;
+
+        .tabs {
+            .items {
+                flex: 0 0 50%;
+                text-align: center;
+                cursor: pointer;
+                filter: grayscale(100%);
+                background-color: #f0f2f8;
+
+                &.active {
+                    background-color: transparent;
+                    opacity: 1;
+                    filter: grayscale(0);
+                    font-weight: 800;
+                }
+            }
+        }
+
+        .selectionLabel {
+            margin-bottom: -9px;
+            font-size: 11px;
+            margin-right: 5px;
+            background-color: #fff;
+            color: $grayBlue;
+        }
+
+        .selection {
+            border: 1px solid #e6ecf4;
+
+            img.imgIcon {
+                width: 30px;
+                height: 30px;
+            }
+
+
+        }
+    }
+
+}
+
+.shadow {
+    box-shadow: 20px 50px 50px rgba(0, 0, 0, 0.05);
+}
+
+
+@include breakpoint(lg) {
+
+    .description {
+        padding-right: 2rem;
+    }
+
+}
+
+@include breakpoint(md) {
+    .mdNone {
+        display: none !important;
+    }
+
+    .description {
+        margin-bottom: 1rem;
+        padding-right: 0rem;
+
+    }
+
+    .demo {
+        flex-wrap: wrap;
+
+        .box {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .startLearning {
+            max-width: 100%;
+            margin: 0 auto;
+            flex: 0 0 100%;
+            padding-left: 0 !important;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .hole {
+        box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
+    }
+
+    .holeStep0 {
+        width: 1px !important;
+        height: 1px !important;
+    }
+
+    .pcDescription {
+        position: absolute;
+        width: 100%;
+        z-index: 99;
+        transition: top 0.4s ease-in;
+        padding: 0 2rem !important;
+
+    }
+
+    .step0 {
+        top: 200px;
+    }
+
+    .step1 {
+        top: 140px;
+    }
+
+    .step2 {
+        top: 210px;
+    }
+
+    .step3 {
+        top: 310px;
+    }
+
+    .step4 {
+        top: 90px;
+    }
+
+    .step5 {
+        top: 210px;
+    }
+
+    .step6 {
+        top: 240px;
+    }
+
+    .step7 {
+        top: 330px;
+    }
+}
+
+@include breakpoint(sm) {
+    .demo {
+        .box {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@include breakpoint(xs) {
+
+    .demo {
+        .box {
+            .header {
+                .items {
+                    &.active {
+                        img {
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .xsFullWidth {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

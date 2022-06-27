@@ -1,0 +1,12 @@
+@import '/src/styles/abstracts/mixins/responsive';
+.RowNewsCard{
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+}
+
+@include breakpoint(xs) {
+    .RowNewsCard{
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+}

@@ -1,0 +1,105 @@
+@import "../../../styles/base/mixins/responsive";
+
+
+.backImG {
+  position: relative;
+
+}
+
+//.backImG::before{
+//  content: "";
+//  //content: url(../../../../../public/svg/backgroundRightArrow.svg);
+//  background-image: url("../../../../public/svg/backgroundRightArrow.svg");
+//  //background-repeat: no-repeat;
+//  width: 100%;
+//  height: 100%;
+//  background-repeat: no-repeat;
+//  background-position: right top;
+//  top: -20%;
+//  position: absolute;
+//  z-index: -1;
+//
+//}
+//.backImG::after{
+//  content: "";
+//  //content: url(../../../../../public/svg/backgroundRightArrow.svg);
+//  background-image: url("../../../../public/svg/backgroundLeftArrow.svg");
+//  //background-repeat: no-repeat;
+//  width: 100%;
+//  height: 100%;
+//  background-repeat: no-repeat;
+//  background-position: left top;
+//  top: 36%;
+//  position: absolute;
+//  z-index: -1;
+//
+//}
+.cirlceBack {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("../../../../public/svg/circleBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 20%;
+  left: 5%;
+  z-index: -1;
+}
+
+.cirlceBack2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("../../../../public/svg/circleBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: 10%;
+  right: 5%;
+  z-index: -1;
+}
+
+.TriangleBack {
+  position: absolute;
+  top: -177px;
+  z-index: -1;
+  right: 0;
+}
+
+.TriangleBack2 {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  z-index: -1;
+}
+
+@include breakpoint(sm) {
+  .TriangleBack {
+    top: -52px;
+  }
+  .TriangleBack2 {
+    top: 1200px;
+  }
+
+}
+
+@include breakpoint(xs) {
+  //.backImG::before{
+  //  content: "";
+  //  //content: url(../../../../../public/svg/backgroundRightArrow.svg);
+  //  background-image: url("../../../../public/svg/backgroundRightMobile.svg");
+  //  //background-repeat: no-repeat;
+  //  width: 100%;
+  //  height: 100%;
+  //  background-repeat: no-repeat;
+  //  background-position: right top;
+  //  top: -3%;
+  //  position: absolute;
+  //  z-index: -1;
+  //
+  //}
+  //.backImG::after{
+  //  background-image: url("../../../../public/svg/backgroundLeftMobile.svg");
+  //  top: 80%;
+  //
+  //}
+}

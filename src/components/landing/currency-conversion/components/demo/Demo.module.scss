@@ -1,0 +1,140 @@
+@import '../../../../../styles/base/colors';
+@import '../../../../../styles/abstracts/mixins/responsive';
+
+.startLearning {
+    position: relative;
+    z-index: 9;
+    flex: 0 0 28%;
+    max-width: 28%;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+    z-index: 9;
+    border: 1px solid #E6ECF4;
+    box-shadow: 5px 10px 24px rgba($color: #45F8F4, $alpha: 0.5);
+    overflow: hidden;
+    flex: 0 0 65%;
+    max-width: 65%;
+    margin: 0 auto;
+    transition-duration: 1s;
+
+    &.isLearning {
+        // flex: 0 0 80%;
+        // max-width: 80%;
+        // transform: scale(1.1);
+    }
+
+    .body {
+
+        .selection {
+            border: 1px solid #E6ECF4;
+            padding: 0.5rem 0.75rem;
+
+            .items {
+
+                .img {
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                .text {}
+            }
+        }
+
+        .arrowBox {
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 1px;
+                border-bottom: 1px solid #E6ECF4;
+                top: 50%;
+            }
+
+            .arrow {
+                box-shadow: 0 0 20px rgba($color: #3983F7, $alpha: 0.21);
+                padding: 0.5rem;
+                border-radius: 100%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                margin: 0 auto;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                cursor: pointer;
+                z-index: 9;
+                position: relative;
+                background: #fff;
+            }
+        }
+    }
+
+    .subDescs {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            height: 60%;
+            width: 2px;
+            border-right: 2px dashed $gainsboro;
+        }
+    }
+}
+
+.afterAnimation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    mix-blend-mode: hard-light;
+    background: transparent;
+
+    .boxafter {
+        padding: 0 10px;
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        mix-blend-mode: hard-light;
+
+        .hole {
+            width: 80px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: gray;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transition: width 2s, height 2s, top 1s, right 1s;
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .startLearning {
+        display: none;
+    }
+
+    .box {
+        flex: 0 0 95%;
+        max-width: 95%;
+    }
+}

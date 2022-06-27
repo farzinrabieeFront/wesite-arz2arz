@@ -1,0 +1,107 @@
+@import '../../styles/base/colors';
+@import '../../styles/abstracts/mixins/responsive';
+
+.fixed {
+    display: none;
+}
+
+@include breakpoint(md) {
+    .fixed {
+        display: flex;
+        position: fixed;
+        top: 0;
+        box-shadow: -15px 0 50px rgba($color: #000, $alpha: 0.1);
+        right: -900px;
+        width: 70%;
+        height: 100%;
+        z-index: 999;
+        -webkit-transition: right 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        -moz-transition: right 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        -ms-transition: right 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        -o-transition: right 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        transition: right 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        height: 100%;
+
+        &.show {
+            right: 0;
+        }
+
+        .box {
+            width: 100%;
+            background-color: #fff;
+            overflow-y: hidden;
+
+            .header {
+                position: relative;
+                background: url(../../../public/images/menu-top-headerBck.png), linear-gradient(33deg, #11dcca 6%, #2f046b 83%);
+                position: relative;
+                background-repeat: no-repeat;
+                background-position: right top;
+                background-size: contain;
+                position: relative;
+
+                .close {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .inventory {
+        border-bottom: 2px solid $lightBlue;
+
+        .img {
+            img {
+                width: 51px;
+            }
+        }
+    }
+
+    .listIcon {
+        position: relative;
+        text-align: center;
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            border: 2px solid $lightBlue;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:after {
+            content: attr(data-label);
+            width: max-content;
+            margin: 0 auto;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            border-radius: 5px;
+            margin-top: 0.2rem;
+            font-size: 75%;
+        }
+
+        &:hover {
+            color: $lightBlue;
+        }
+
+        // #ff8e0c  beautiful orange
+        .notification {
+            background-color: rgba($color: $lightRed, $alpha: 1);
+            color: #fff;
+            font-size: 0.7rem;
+            position: absolute;
+            bottom: 15px;
+            right: -8px;
+            border-radius: 5px;
+            padding: 1px 6px;
+            font-weight: 800;
+        }
+    }
+}

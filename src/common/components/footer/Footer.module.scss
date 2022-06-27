@@ -1,0 +1,14 @@
+.footer {
+  width: 95%;
+  border-top: 1px solid transparent;
+  border-radius: 35px;
+  //background-image: linear-gradient(#f5f7f8, #f5f7f8),
+  //  linear-gradient(45deg, #0094f0, #14f4c9, #00a3a3);
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  a {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,88 @@
+@import "../../../../styles/base/mixins/responsive";
+
+.categoryCards {
+  .card {
+    position: relative;
+    border-radius: 12px;
+
+    .overlay {
+      position: absolute;
+      border-radius: 12px;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 47.4%,
+        rgba(0, 0, 0, 0.1) 61.98%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+    }
+  }
+}
+.lineHeight{
+  line-height: 22px;
+}
+
+@include breakpoint(sm) {
+  .categoryCards {
+    .swiper {
+      height: 300px;
+      padding: 5px;
+
+      :global(.swiper-pagination) {
+        transform: translate(50%, -50%);
+        bottom: 20px;
+      }
+
+      .navWrapper {
+        position: absolute;
+        width: 40%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        bottom: -6px;
+        z-index: 999;
+
+        .btnPrev {
+          width: 32px;
+          height: 32px;
+          border: 1px solid var(--main-gray-0);
+          color: var(--main-gray-1);
+          border-radius: 100%;
+          transform: rotate(90deg);
+          padding: 3px;
+        }
+
+        .btnNext {
+          width: 32px;
+          height: 32px;
+          border: 1px solid var(--main-gray-0);
+          color: var(--main-gray-1);
+          border-radius: 100%;
+          transform: rotate(90deg);
+          padding: 3px;
+        }
+      }
+      img {
+        height: 90%;
+      }
+
+      .card {
+        height: 90%;
+        .overlay {
+          height: 90%;
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .categoryCards {
+    .swiper {
+      height: 245px;
+    }
+  }
+}

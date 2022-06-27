@@ -1,0 +1,29 @@
+.category {
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    li {
+        margin-left: 1rem;
+        flex: 0 0 auto;
+
+        &.active {
+            color: #0BC0CF;
+            border-bottom: 2px solid #0BC0CF;
+        }
+
+        &:last-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.responsiveCategory {
+    display: block;
+    width: 90%;
+    margin:0 auto ;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    // padding: 0 1rem;
+    // background: red;
+}

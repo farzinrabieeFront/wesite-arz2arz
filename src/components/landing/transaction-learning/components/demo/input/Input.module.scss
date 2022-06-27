@@ -1,0 +1,36 @@
+.input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #E6ECF4;
+
+    input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        outline: none;
+        color: #909AA6;
+
+        &:focus,
+        &:active {
+            border: none;
+            outline: none;
+        }
+    }
+
+    .img {
+        position: absolute;
+        left: 2rem;
+        outline: none;
+        height: 19px;
+        filter: grayscale(100%);
+    }
+}
+
+.activeAnimation {
+    z-index: 9999 !important;
+    position: relative;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 97%;
+    margin: 0 auto;
+}

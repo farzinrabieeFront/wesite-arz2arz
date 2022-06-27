@@ -1,0 +1,133 @@
+@import "../../src/styles/base/colors";
+@import "../../src/styles/abstracts/mixins/responsive";
+
+.preText {
+  white-space: pre;
+}
+.cirlceBack{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("../../public/svg/circleBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 10%;
+  left: 5%;
+  z-index: -1;
+}
+.cirlceBack2{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("../../public/svg/circleBackground.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: 50%;
+  right: 5%;
+  z-index: -1;
+}
+
+@include breakpoint(md) {
+  .preText {
+    white-space: normal;
+    line-height: 36px;
+  }
+}
+
+.ourTeamPic {
+  position: relative;
+
+  img {
+    border-radius: 18px;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: -63px;
+    right: 277px;
+    content: url("../../public/images/index/our-team-r-border.svg");
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    bottom: -72px;
+    left: 278px;
+    content: url("../../public/images/index/our-team-l-border.svg");
+  }
+}
+.backImG{
+   position: relative;
+
+ }
+.backImG::before{
+  content: "";
+  //content: url(../../../../../public/svg/backgroundRightArrow.svg);
+  background-image: url("../../public/svg/backgroundRightArrow.svg");
+  //background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: right top;
+  top: -17%;
+  position: absolute;
+  z-index: -1;
+
+}
+
+
+
+
+@include breakpoint(lg) {
+  .ourTeamPic {
+    &::before {
+      right: 132px;
+    }
+
+    &::after {
+      left: 132px;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .ourTeamPic {
+    &::before {
+      right: -22px;
+    }
+
+    &::after {
+      left: -22px;
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  .ourTeamPic {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+@include breakpoint(xs){
+  .backImG::before{
+    content: "";
+    //content: url(../../../../../public/svg/backgroundRightArrow.svg);
+    background-image: url("../../public/svg/backgroundRightMobile.svg");;
+    //background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    top: -8%;
+    position: absolute;
+    z-index: -1;
+
+  }
+
+}

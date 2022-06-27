@@ -1,0 +1,96 @@
+@import '/src/styles/abstracts/mixins/responsive';
+
+.selected {
+  background: rgb(47, 4, 107);
+  background: linear-gradient(90deg, rgba(47, 4, 107, 1) 0%, rgba(17, 220, 202, 1) 100%);
+  color: #fff;
+  // border-radius: 10px;
+
+  span,
+  a {
+    color: #fff !important;
+  }
+
+  .items {
+    img {
+      border: 3px solid #45F8F4;
+      box-shadow: 0 0 16px #45F8F4;
+    }
+  }
+}
+
+.btnGp {
+  border-radius: 12px;
+  border: 1px solid #D9E0E9;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+
+}
+
+.ParentBtns {
+  overflow-x: auto;
+  scrollbar-color: transparent transparent;
+
+  &::-webkit-scrollbar:horizontal {
+    height: 0;
+    width: 0;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb:horizontal {
+    display: none;
+  }
+}
+
+
+.form {
+  position: relative;
+  box-shadow: 0 20px 50px rgba($color: #2E5BFF, $alpha: 0.05);
+  border: 1px solid #E5EFFF;
+  background-color: #FFF;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  max-width: 536px;
+  width: 100%;
+  border-radius: 20px !important;
+.parentInput{
+  input{
+  box-shadow: unset !important;
+
+  }
+}
+  input {
+    border: none;
+    outline: none;
+    color: #5C5C5B;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .icon {
+    //position: absolute;
+    //right: 1rem;
+    // top: 0;
+  }
+
+  .button {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+  }
+}
+
+
+@include breakpoint(md) {
+  .deatailCurrency {
+    display: none;
+  }
+}

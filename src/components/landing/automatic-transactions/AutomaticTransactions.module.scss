@@ -1,0 +1,57 @@
+@import '../../../styles/abstracts/mixins/responsive';
+
+.background {
+    .description {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 4rem;
+
+    }
+
+    .demo {
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: -15px;
+            top: -50px;
+            width: 600px;
+            height: 600px;
+            max-width: 100%;
+            background-image: url(../../../../public/images/demo-AutomaticTransactions-bg.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+
+@include breakpoint(md) {
+    .background {
+
+        .description {
+
+            display: none;
+        }
+
+        .demo {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0rem;
+
+            &:before {
+                right: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}

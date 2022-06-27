@@ -1,0 +1,114 @@
+@import "../../../styles/base/colors";
+@import "../../../styles/abstracts/mixins/responsive";
+
+.label {
+  display: inline-block;
+  background: rgba($color: $lightRed, $alpha: 0.2);
+  color: $lightRed;
+  border-radius: 50rem !important;
+  padding: 0.175rem 0.75rem;
+  font-size: 0.8rem;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+
+  &.greenLabel {
+    background: rgb(214, 246, 232);
+    color: $lightGreen;
+  }
+}
+.icon {
+}
+.col {
+  .box {
+    box-shadow: 20px 5px 50px rgba(46, 91, 255, 0.05);
+    border: 1px solid #e5efff;
+    border-radius: 20px;
+    background-color: #fff;
+    height: 100%;
+    overflow: hidden;
+    // max-width: 320px;
+    margin: 0 auto;
+
+    .img {
+      a {
+        position: relative;
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    .desc {
+      padding: 1rem 1rem;
+      padding-bottom: 0.35rem;
+      display: flex;
+      flex-flow: row-reverse wrap;
+      justify-content: flex-start;
+      flex-direction: row;
+
+      .title {
+        font-size: 0.9rem;
+        line-height: 1.7;
+      }
+
+      .text {
+        font-size: 0.85rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-align: justify;
+        line-height: 1.8;
+      }
+
+      .icon {
+        &.active {
+          svg {
+            color: #ff446b;
+          }
+        }
+        svg {
+          color: #e7eaf0;
+        }
+      }
+    }
+
+    .hiddenLink {
+      text-align: center;
+      background-color: $link;
+      border-top: 1px solid $link;
+      top: 45px;
+      position: relative;
+
+      a {
+        color: #fff;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  &:hover {
+    .box {
+      box-shadow: 20px 5px 50px rgba(46, 91, 255, 0.15);
+
+      .hiddenLink {
+        top: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .col {
+    .box {
+      .hiddenLink {
+        top: 0;
+      }
+    }
+  }
+}

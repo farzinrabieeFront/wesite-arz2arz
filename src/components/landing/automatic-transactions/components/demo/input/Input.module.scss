@@ -1,0 +1,33 @@
+.input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #E6ECF4;
+    position: relative;
+
+    input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        outline: none;
+        color: #000;
+
+        &::-moz-placeholder,
+        &::-webkit-input-placeholder {
+            opacity: 1;
+        }
+
+        &:focus,
+        &:active {
+            border: none;
+            outline: none;
+        }
+    }
+
+    .label {
+        position: absolute;
+        right: 11px;
+        top: -11px;
+        color: #909AA6;
+        background: rgb(250, 251, 253);
+        background: linear-gradient(0deg, rgba(250, 251, 253, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+}

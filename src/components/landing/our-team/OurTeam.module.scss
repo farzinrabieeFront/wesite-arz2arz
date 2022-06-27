@@ -1,0 +1,314 @@
+@import '../../../styles/base/colors';
+@import '../../../styles/abstracts/mixins/responsive';
+
+.pics {
+    background-image: url(../../../../public/images/comment-bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 496px;
+    position: relative;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ECEFF3;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        padding: 1rem;
+        position: relative;
+        cursor: pointer;
+        // border: 11px solid #ECEFF3;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+            rgba(10, 37, 64, 0.35) 2px -5px 6px 0px inset;
+
+        &.hoseiniFinance {
+            left: 0;
+            right: 0;
+            top: 40%;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto;
+        }
+
+        &.walletCenter {
+            bottom: -78px;
+            right: 190px;
+            z-index: 9;
+
+            animation: walletCentercircle 156s linear infinite;
+
+            @keyframes walletCentercircle {
+                0% {
+                    transform: rotate(0deg) translateY(200px) rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg) translateY(200px) rotate(-360deg);
+                }
+            }
+
+
+        }
+
+
+
+        &.arzToarz {
+            top: -30px;
+            right: 190px;
+            z-index: 9;
+            animation: arzToarzcircle 156s linear infinite;
+
+            @keyframes arzToarzcircle {
+                0% {
+                    transform: rotate(0deg) translateX(-200px) rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg) translateX(-200px) rotate(-360deg);
+                }
+            }
+
+        }
+
+        &.iranChart {
+            bottom: 140px;
+            left: -180px;
+            z-index: 9;
+            animation: iranChartcircle 156s linear infinite;
+
+            @keyframes iranChartcircle {
+                0% {
+                    transform: rotate(0deg) translate(200px) rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg) translate(200px) rotate(-360deg);
+                }
+            }
+        }
+
+        &.active {
+
+            background-color: #0BC0CF;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(10, 37, 64, 0.35) 2px -5px 6px 0px inset;
+        }
+
+        &:hover {
+            transform: scale(1.08);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                rgba(10, 37, 64, 0.35) 4px -5px 6px 0px inset;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+    }
+}
+
+.desc {
+    background-image: url(../../../../public/images/quotes_ic.png);
+    background-position: 0 62%;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &:before {
+        content: "";
+        height: 100%;
+        width: 4px;
+        background-color: #F7F7F7;
+        position: absolute;
+        right: 15px;
+        top: 0;
+    }
+
+    .linkButton {
+        border: 1px solid;
+        border-radius: 50rem !important;
+        padding: .375rem .75rem;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+            background-color: $darkBlue;
+            color: #fff;
+            border-color: $darkBlue;
+        }
+
+        svg {
+            vertical-align: text-bottom;
+            margin-right: 5px;
+        }
+    }
+
+    .arrows {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+        border-radius: 100%;
+        cursor: pointer;
+
+        &.active {
+            background-color: #2A45E0;
+            color: #fff;
+        }
+    }
+
+    .circle {
+        color: #EDF0F4;
+        cursor: pointer;
+
+        &.active {
+            color: #2A45E0;
+
+        }
+    }
+}
+
+
+@include breakpoint(md) {
+    .wideRow {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        justify-content: center;
+
+        &:first-child {
+            margin-bottom: 25px;
+        }
+    }
+
+    .pics {
+        .logo {
+            &.walletCenter {
+                bottom: -78px;
+                right: 260px;
+                z-index: 9;
+                animation: walletCentercircle2 126s linear infinite;
+                @keyframes walletCentercircle2 {
+                    0% {
+                        transform: rotate(0deg) translateY(210px) rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg) translateY(210px) rotate(-360deg);
+                    }
+                }
+            }
+            &.arzToarz {
+                top: -30px;
+                right: 260px;
+                z-index: 9;
+                animation: arzToarzcircle2 126s linear infinite;
+
+                @keyframes arzToarzcircle2 {
+                    0% {
+                        transform: rotate(0deg) translateX(-210px) rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg) translateX(-210px) rotate(-360deg);
+                    }
+                }
+            }
+            &.iranChart {
+                bottom: 130px;
+                left: -260px;
+                z-index: 9;
+                animation: iranChartcircle1 126s linear infinite;
+
+                @keyframes iranChartcircle1 {
+                    0% {
+                        transform: rotate(0deg) translate(210px) rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg) translate(210px) rotate(-360deg);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@include breakpoint(xs) {
+    .pics {
+        flex: 0 0 80%;
+        max-width: 80%;
+        margin: 0 auto;
+        background-size: contain;
+        margin-top: -50px;
+        margin-bottom: -40px;
+
+        .logo {
+            width: 80px;
+            height: 80px;
+
+            &.hoseiniFinance {
+                width: 110px;
+                height: 110px;
+            }
+
+            &.walletCenter {
+                bottom: -110px;
+                right: 100px;
+                animation: walletCentercircle3 155s linear infinite;
+
+                @keyframes walletCentercircle3 {
+                    0% {
+                        transform: rotate(0deg) translateY(130px) rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg) translateY(130px) rotate(-360deg);
+                    }
+                }
+            }
+
+            &.arzToarz {
+                top: 30px;
+                right: 100px;
+                animation: arzToarzcircle3 155s linear infinite;
+
+                @keyframes arzToarzcircle3 {
+                    0% {
+                        transform: rotate(0deg) translateX(-130px) rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg) translateX(-130px) rotate(-360deg);
+                    }
+                }
+            }
+
+            &.iranChart {
+                bottom: 60px;
+                left: -100px;
+                animation: iranChartcircle3 155s linear infinite;
+
+                @keyframes iranChartcircle3 {
+                    0% {
+                        transform: rotate(0deg) translate(130px) rotate(0deg);
+                    }
+
+                    100% {
+                        transform: rotate(360deg) translate(130px) rotate(-360deg);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,174 @@
+@import '/src/styles/abstracts/mixins/responsive';
+@import '/src/styles/base/colors';
+
+.title {
+    position: relative;
+
+    &:after {
+        content: "";
+        bottom: -6px;
+        width: 100%;
+        background-color: $lightGreen;
+        border-radius: 10px;
+        left: 0;
+        right: 0;
+        height: 5px;
+        position: absolute;
+    }
+
+    &.sell {
+        &:after {
+            background-color: $lightRed;
+        }
+    }
+}
+
+.head {
+    animation: opacity 2.2s forwards;
+    animation-timing-function: ease-in-out;
+
+    @keyframes opacity {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.description {
+    .img {
+        flex: 0 0 60px;
+        max-width: 60px;
+    }
+    min-height: 111px;
+    bottom: -200px;
+    position: relative;
+    animation: description 1s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes description {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+.prev {
+    left: -100px;
+    position: relative;
+    animation: prevButton 1.5s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes prevButton {
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.next {
+    right: -100px;
+    position: relative;
+    animation: nextButton 1.5s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes nextButton {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+.svg {
+    position: absolute;
+    top: 11px;
+    left: -100px;
+    z-index: 99;
+    overflow: inherit;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 3;
+}
+
+.path {
+    stroke-dasharray: 1105;
+    stroke-dashoffset: 1105;
+    animation: border 1.4s forwards;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+
+}
+
+.bottomSvg {
+    bottom: 222px;
+    top: auto;
+}
+
+@keyframes border {
+    from {
+        stroke-dashoffset: 1105;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.smSvg {
+    display: none;
+}
+
+@include breakpoint(lg) {
+    .lgSvg {
+        display: none;
+    }
+
+    .smSvg {
+        display: block;
+        left: -60px;
+        top: 7px;
+    }
+
+    .bottomSvg {
+        bottom: 228px;
+        top: auto;
+    }
+}
+
+@include breakpoint(md) {
+
+    .smSvg {
+        display: none;
+    }
+
+    .head {
+        display: none !important;
+    }
+    
+    .PrevNext{
+       button{
+           font-size: 0.8rem;
+       }
+    }
+    
+.description {
+    min-height: auto;
+    .img {
+      display: none;
+    }
+}
+}

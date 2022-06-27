@@ -1,0 +1,129 @@
+@import '../../../../../styles/base/colors';
+@import '../../../../../styles/abstracts/mixins/responsive';
+
+.startLearning {
+    position: relative;
+    z-index: 9;
+    flex: 0 0 28%;
+    max-width: 28%;
+}
+
+.box {
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+    z-index: 9;
+    border: 1px solid #E6ECF4;
+    box-shadow: -5px 10px 24px rgba($color: #45F8F4, $alpha: 0.5);
+    // overflow: hidden;
+    flex: 0 0 65%;
+    max-width: 65%;
+    margin: 0 auto;
+
+    .tabs {
+        background-color: #F0F2F8;
+
+        .items {
+            flex: 0 0 50%;
+            max-width: 50%;
+            text-align: center;
+            cursor: pointer;
+            opacity: 0.5;
+            filter: grayscale(100%);
+
+            &.active {
+                font-weight: bold;
+                background-color: #fff;
+                border-radius: 20px 0 0 0;
+                opacity: 1;
+                filter: grayscale(0);
+            }
+        }
+    }
+
+    .body {
+
+        .selection {
+            border: 1px solid #E6ECF4;
+            padding: 0.5rem 0.75rem;
+
+            .items {
+                .img {
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .inventory {
+        color: #E6ECF4;
+        position: relative;
+
+
+
+        &:before {
+            content: "";
+            background-color: #E6ECF4;
+            width: 100%;
+            position: absolute;
+            height: 2px;
+            top: 40%;
+            left: 0;
+            right: 0;
+        }
+
+        .circle {
+            width: 16px;
+            height: 16px;
+            background-color: #E6ECF4;
+            border: 3px solid #fff;
+            border-radius: 100%;
+            z-index: 9;
+            position: relative;
+            cursor: pointer;
+
+
+            &.selected {
+                background-color: #2A45E0;
+
+            }
+
+            &.active {
+                background-color: #fff;
+                border-color: #2A45E0;
+            }
+        }
+    }
+
+    .subDescs {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            right: 8px;
+            top: 0px;
+            height: 60%;
+            width: 2px;
+            border-right: 2px dashed $gainsboro;
+        }
+    }
+}
+
+
+
+@include breakpoint(md) {
+    .startLearning {
+        display: none;
+    }
+
+    .box {
+        flex: 0 0 85%;
+        max-width: 85%;
+    }
+}

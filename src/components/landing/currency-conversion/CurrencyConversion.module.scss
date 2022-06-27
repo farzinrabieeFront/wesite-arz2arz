@@ -1,0 +1,75 @@
+@import '../../../styles/abstracts/mixins/responsive';
+
+.background {
+    .description {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 4rem;
+
+    }
+
+    .demo {
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: -15px;
+            // right: 0;
+            top: -10px;
+            border-radius: 100%;
+            width: 555px;
+            height: 555px;
+            max-width: 100%;
+            background: rgb(47, 4, 107);
+            background: linear-gradient(353deg, rgba(47, 4, 107, 1) 30%, rgba(17, 220, 202, 1) 95%);
+        }
+    }
+}
+
+
+@include breakpoint(md) {
+    .background {
+
+        .description {
+            // flex: 0 0 100%;
+            // max-width: 100%;
+            // padding: 0 3rem;
+            display: none;
+        }
+
+        .demo {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0rem;
+
+            &:before {
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}
+
+// @include breakpoint(sm) {
+    //     .background {
+
+
+    //         .demo {
+
+    //             &:before {
+
+    //                 width: 100%;
+    //                 height: 100%;
+    //             }
+    //         }
+    //     }
+
+    // }

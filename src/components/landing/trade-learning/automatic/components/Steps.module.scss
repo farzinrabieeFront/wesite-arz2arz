@@ -1,0 +1,158 @@
+@import '/src/styles/abstracts/mixins/responsive';
+@import '/src/styles/base/colors';
+
+.title {
+    position: relative;
+
+    animation: opacity 2.2s forwards;
+    animation-timing-function: ease-in-out;
+
+    @keyframes opacity {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+.description {
+    .img {
+        flex: 0 0 60px;
+        max-width: 60px;
+    }
+
+    min-height: 73px;
+    bottom: -200px;
+    position: relative;
+    animation: description 1s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes description {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+.prev {
+    left: -100px;
+    position: relative;
+    animation: prevButton 1.5s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes prevButton {
+    from {
+        left: -100px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.next {
+    right: -100px;
+    position: relative;
+    animation: nextButton 1.5s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes nextButton {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+.svg {
+    position: absolute;
+    top: -78px;
+    right: -85px;
+    z-index: 99;
+    overflow: inherit;
+    stroke-width: 3;
+    stroke: #0BC0CF;
+    fill: none;
+}
+
+.path {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: border 2s forwards;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.bottomSvg {
+    bottom: 78px;
+    top: auto;
+}
+
+@keyframes border {
+    from {
+        stroke-dashoffset: 2000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.smSvg {
+    display: none;
+}
+
+
+@include breakpoint(lg) {
+    .lgSvg {
+        display: none;
+    }
+
+    .smSvg {
+        display: block;
+
+        width: 500px;
+    }
+
+    .bottomSvg {
+        bottom: 82px;
+    }
+}
+
+
+@include breakpoint(md) {
+
+    .smSvg {
+        display: none;
+    }
+
+
+    .box {
+        display: none;
+    }
+
+    .PrevNext {
+        button {
+            font-size: 0.8rem;
+        }
+    }
+
+    .description {
+        min-height: auto;
+
+        .desc {
+            color: #fff;
+        }
+
+    }
+}

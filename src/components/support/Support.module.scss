@@ -1,0 +1,23 @@
+@import '../../styles/base/colors';
+@import '../../styles/abstracts/mixins/responsive';
+
+.support {
+    position: fixed;
+    bottom: 190px;
+    left: -4px;
+    background: $lightBlue;
+    z-index: 99;
+    color: #fff;
+    border-radius: 0 30px 30px 0;
+    padding: 7px ;
+    display: none;
+    box-shadow: 0 5px 10px rgba($color: $lightBlue, $alpha: 0.5);
+}
+
+
+@include breakpoint(md) {
+
+    .support {
+        display: block;
+    }
+}

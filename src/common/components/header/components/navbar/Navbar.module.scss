@@ -1,0 +1,51 @@
+.desktop {
+  .link {
+    color: var(--main-gray-4);
+    font-size: 1rem;
+    font-weight: 500;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--main-blue);
+      text-decoration: none;
+    }
+  }
+
+  .active {
+    a {
+      color: var(--main-blue) !important;
+    }
+  }
+}
+
+.mobile {
+  li {
+    padding: 16px 0;
+    border-top: 1px solid rgba(0, 186, 186, 0.1);
+    border-bottom: 1px solid rgba(0, 186, 186, 0.1);
+  }
+
+  .link {
+    color: var(--main-gray-3);
+    font-size: 1.25rem;
+  }
+
+  .active {
+    position: relative;
+    background-color: rgba(0, 186, 186, 0.05);
+    border-color: var(--main-blue);
+    color: var(--main-gray-3);
+
+    ::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 100%;
+      background-color: var(--main-blue);
+      top: 0;
+      right: 0;
+      border-radius: 8px 0px 0px 8px;
+    }
+  }
+}

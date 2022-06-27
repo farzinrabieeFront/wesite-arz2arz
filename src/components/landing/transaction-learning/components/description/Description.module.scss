@@ -1,0 +1,44 @@
+@import "/src/styles/base/colors";
+
+.title {
+    color: #fff;
+}
+
+.box {
+
+    .img {
+        flex: 0 0 60px;
+        max-width: 60px;
+    }
+}
+
+.buttons {
+
+    .items {
+        // flex: 0 0 50%;
+        // max-width: 50%;
+        text-align: center;
+
+        button {
+            background-image: url(../../../../../../public/images/Intersection-button.png);
+            background-repeat: no-repeat;
+            background-position: center left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 156px;
+        }
+
+        .text {
+            font-size: 0.75rem;
+        }
+    }
+
+}
+
+.isLearning {
+    .border {
+
+        border-top: 3px solid $lightGreen;
+    }
+}

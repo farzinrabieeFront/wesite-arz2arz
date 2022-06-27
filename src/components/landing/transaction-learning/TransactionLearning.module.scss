@@ -1,0 +1,42 @@
+@import '../../../styles/abstracts/mixins/responsive';
+
+.background {
+    background-image: url(../../../../public/images/bannerBg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // height: 598px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    .description {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 3rem;
+    }
+
+    .demo {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 4rem;
+    }
+}
+
+@include breakpoint(md) {
+    .background {
+
+        .description {
+            // flex: 0 0 100%;
+            // max-width: 100%;
+            // padding: 0 3rem;
+            display: none;
+        }
+
+        .demo {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0rem;
+        }
+    }
+
+}

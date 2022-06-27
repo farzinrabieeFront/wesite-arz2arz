@@ -1,0 +1,92 @@
+@import '../../styles/base/colors';
+@import '../../styles/abstracts/mixins/responsive';
+
+
+.icon {
+    background-image: url(../../../public/images/beforeTitle.png);
+    background-size: cover;
+    flex: 0 0 80px;
+    max-width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 50px;
+        height: auto;
+    }
+
+    &.noneBefore {
+        background-image: none;
+
+        img {
+            width: 70px;
+        }
+    }
+}
+
+.title {
+    position: relative;
+
+    &.waveLine {
+        flex: 0 0 195px;
+        max-width: 195px;
+    }
+
+}
+
+.center {
+
+    justify-content: center;
+}
+
+
+.label {
+    display: inline-block;
+    background: rgba($color: $lightRed, $alpha: 0.2);
+    color: $lightRed;
+    border-radius: 50rem !important;
+    padding: .175rem .75rem;
+    font-size: 0.8rem;
+    // margin-right: 15px;
+
+    &.greenLabel {
+        background: rgba($color: $lightGreen, $alpha: 0.16);
+        color: $lightGreen;
+    }
+}
+
+
+
+
+
+
+@include breakpoint(sm) {
+    .singleBlog {
+        
+        .icon {
+            display: none !important;
+        }
+    }
+
+    .icon {
+        // display: none;
+        flex: 0 0 60px;
+        max-width: 60px;
+        height: 60px;
+
+        img {
+            width: 35px;
+        }
+    }
+
+    .title {
+
+        &.waveLine {
+            flex: 0 0 145px;
+            max-width: 145px;
+        }
+
+    }
+}
